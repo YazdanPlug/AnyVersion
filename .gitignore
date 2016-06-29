@@ -1,0 +1,6 @@
+.gitignore
+.idea/
+AnyVersion.iml
+META-INF/
+src/test/
+target/
