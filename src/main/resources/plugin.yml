@@ -1,6 +1,6 @@
 name: AnyVersion
 main: ru.nukkit.anyversion.AnyVersion
-version: "0.0.2"
+version: "0.0.4"
 author: fromgate, nukkit.ru
 api: ["1.0.0"]
 description: Allows connection of outdated/outrunned clients
