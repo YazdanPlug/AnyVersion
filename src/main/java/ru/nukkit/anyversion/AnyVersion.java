@@ -33,12 +33,15 @@ public class AnyVersion extends PluginBase implements Listener{
             return;
         }
 
+        String clientName = loginPacket.username == null ? "[Unknown player]" : loginPacket.username;
+
         if (!checkClientFilter (loginPacket.getProtocol())) {
-            log (loginPacket.username,"is using incorrect protocol version ("+loginPacket.getProtocol()+")");
+
+            log (clientName,"using incorrect protocol version ("+loginPacket.getProtocol()+")");
             return;
         }
 
-        log(TextFormat.YELLOW + loginPacket.username + " is using protocol version " + loginPacket.getProtocol() + " (server version: " + this.serverProtocolVersion + ")");
+        log(TextFormat.YELLOW + clientName + " using protocol version " + loginPacket.getProtocol() + " (server version: " + this.serverProtocolVersion + ")");
         log(TextFormat.RED + "Warning! " + TextFormat.YELLOW + "Using outdated/outrunning client could damage your server.");
         log(TextFormat.YELLOW + "Use it on your own risk");
         loginPacket.protocol = this.serverProtocolVersion;
