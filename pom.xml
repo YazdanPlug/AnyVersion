@@ -7,6 +7,7 @@
     <groupId>ru.nukkit.versionfix</groupId>
     <artifactId>versionfix</artifactId>
     <version>1.0-SNAPSHOT</version>
+      <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -15,5 +16,6 @@
                 <target>1.8</target>
             </configuration>
         </plugin>
+      </plugins>
 
 </project>
